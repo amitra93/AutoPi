@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/rpiImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rpi"
+        android:text="Raspberry Pi Logo"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rpiImage"
+        android:layout_centerHorizontal="true"
+        android:text="65 F"
+        android:textSize="80sp" />
+
+    <Switch
+        android:id="@+id/gpioPin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentTemp"
+        android:layout_centerHorizontal="true"
+        android:text="Room Light" />
+
+    <Switch
+        android:id="@+id/gpioPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gpioPin2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10sp"
+        android:text="Desk Lamp" />
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gpioPin"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Pause" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gpioPin"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/buttonPlay"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/buttonPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gpioPin"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/buttonPlay"
+        android:text="Prev" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/buttonVolumePlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/buttonStop"
+        android:text="V++" />
+
+    <Button
+        android:id="@+id/buttonVolumeMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/buttonStop"
+        android:text="V--" />
+
+</RelativeLayout>
